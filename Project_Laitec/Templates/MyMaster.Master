@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyMaster.master.cs" Inherits="Project_Laitec.Templates.MyMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ISOD</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="css/orman.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />	
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script language="javascript" type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script> 
+<!--  t e m p l a t e m o  372  t i t a n i u m  -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        
+
+
+
+
+
+
+
+         <div id="templatemo_wrapper">
+	<div id="templatemo_header">
+    	<div id="site_title"><a href="https://wwww.ehda.center">انجمن اهدای عضو ایرانیان</a></div>
+    	<div id="templatemo_search">
+            <form action="#" method="get">
+              <input type="text" value="Search..." name="keyword" id="keyword" title="keyword" 
+              				onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+              <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
+            </form>
+        </div>
+    </div><!-- END of templatemo_header -->
+    <div id="templatemo_menu" class="ddsmoothmenu">
+        <ul>
+            <li><a href="Home.aspx" class="selected">خانه</a></li>
+            <li><a href="Register.aspx">ثبت نام</a></li>
+            <li><a href="SignIn.aspx">ورود</a></li>
+            <li><a href="MyFormUsingMasterPage.aspx">نمایش اخبار</a></li>
+            <li><a href="#">مدیریت</a>
+                <ul>
+                    <li><a href="EditUser.aspx">ویرایش کاربران</a></li>
+                    <li><a href="RegistNews.aspx">افزودن اخبار</a></li>
+                    <li><a href="SearchUsers.aspx">ویرایش کاربران</a></li>
+                    <li><a href="UsersList.aspx">لیست کاربران</a></li>
+              	</ul>
+            </li>
+        </ul>
+        <br style="clear: left" />
+    </div> <!-- end of templatemo_menu -->
+    <div id="templatemo_slider">
+    	 <div class="slider-wrapper theme-orman">
+            <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+                <img src="images/EHDA/1505824544_8xNwZk3ZIG5UDQ2vSug8DCD8xiAgVC_original.jpg" alt="ehda.center" title="#I S O D" />
+                <img src="images/EHDA/1508317664_7QAY3rkOLU4ueFg4PtTNsvziCIgp94_original.jpg" alt="ehda.center" title="#I S O D" />
+                <a href="#"><img src="images/EHDA/1510306685_DpmB86eWFXRTWUecKHJQUY0kkI3JpV_original.jpg" alt="ehda.center" title="#I S O D" /></a>
+            </div>
+            <div class="nivo-controlNav-bg"></div>
+        </div> 
+		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+        <script type="text/javascript">
+            $(window).load(function () {
+                $('#slider').nivoSlider({
+                    controlNav: true
+                });
+            });
+        </script>
+    </div><!-- END of templatemo_slider -->
+    <div id="templatemo_main" style="background-image:url('images/EHDA/2.JPG');">
+    	
+        
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        
+    </div><!-- END of templatemo_main -->
+</div><!-- END of templatemo_wrapper -->
+<div id="templatemo_bottom_wrapper">
+	<div id="templatemo_bottom">
+    	<div class="col one_fourth">
+            <h4 style="text-align:center;">درباره</h4>
+            <p style="text-align:right;">
+            انجمن اهدای عضو ایرانیان در تلاش است با فرهنگ سازی امر اهدای عضو در کشور با شعار هر ایرانی یک کارت اهدای عضو از مرگ بیماران به علت نداشتن عضو کافی جهت پیوند به این عزیزان جلوگیری کند.
+            </p>
+        </div>
+    	<div class="col one_fourth">
+            <h4 style="text-align:center;">محل انجمن</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.9271464965022!2d51.4087287153248!3d35.752595380177766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0711e85288e1%3A0x79da58d67270a993!2z2KfZhtis2YXZhiDYp9mH2K_Yp9uMINi52LbZiCDYp9mK2LHYp9mG2YrYp9mG!5e0!3m2!1sen!2s!4v1570263003482!5m2!1sen!2s" width="230" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div class="clear"></div>
+        </div>
+    	<div class="col one_fourth" style="text-align:right;">
+    	<h4 style="text-align:center;">پست های اخیر</h4>
+        <ul class="no_bullet">
+            <li>
+                <span class="header"><a href="#">برگزاری جلسه آیروس اردبیل</a></span>
+               دیروز جلسه آیروس در شعبه اردبیل برگزار شد.
+            </li>
+            <li>
+                <span class="header"><a href="#">برگزاری غرفه انجمن در بوستان نفس</a></span>
+                غرفه انجمن به همت شهرداری در بوستان نفس به کار خود پایان داد. 
+            </li>
+                <li>
+                <span class="header"><a href="#">روز طبیعت با سفیران</a></span>
+                سفیران انجمن با کاشتن نهال روز طبیعت را گرامی داشتند.
+            </li>
+		</ul>
+    </div>
+    <div class="col one_fourth no_margin_right" style="direction:rtl;">
+    	<h4 style="text-align:center;">توییتر</h4>
+        <ul class="no_bullet">
+        	<li><a href="#">@safiranehda</a> روز خوب با بقیه سفیران در طبیعت</li>
+            <li>جلسه توجیهی <a href="#">سفیران</a> در دانشگاه خاتم برگزار میشود</li>
+            <li> هر ایرانی یک کارت اهدای عضو <a href="#">http://www.ehda.center</a></li>
+        </ul>
+    </div>
+        
+        <div class="clear"></div>
+    </div><!-- END of templatemo_bottom -->
+    </div><!-- END of templatemo_bottom_wrapper -->    
+<div id="templatemo_footer_wrapper">    
+    <div id="templatemo_footer">
+    	<p>Copyright © 2072 <a href="http://ehda.center">Ehda.Center</a></p>
+    </div><!-- END of templatemo_footer -->
+</div><!-- END of templatemo_footer_wrapper -->
+    </form>
+</body>
+</html>
